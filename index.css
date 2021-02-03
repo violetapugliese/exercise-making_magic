@@ -1,0 +1,58 @@
+
+/* #4a009e */
+html {
+    font-family: Arial, Helvetica, sans-serif
+}
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 500vh;
+    background-color: rgb(135, 15, 233);
+    animation: body 1s linear;
+  }
+  @keyframes body {
+    to {
+      background-color: rgb(243, 141, 7);
+    }
+  }
+  .navBar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navBar a {
+    width: 40rem;
+    padding: 1rem 0rem;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a:hover {
+    background-color: tomato;
+    animation: body 1s linear;
+}
+.objects {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.title {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    /* margin: 4rem auto; */
+    color: white;
+    font-size: 8rem;
+}
+  :root * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
